@@ -1,88 +1,78 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { StyleSheet, Image, Platform } from 'react-native';
 
-import { Collapsible } from '@/components/Collapsible';
-import { ExternalLink } from '@/components/ExternalLink';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import { Collapsible } from '../../components/Collapsible';
+import { ExternalLink } from '../../components/ExternalLink';
+import ParallaxScrollView from '../../components/ParallaxScrollView';
+import { ThemedText } from '../../components/ThemedText';
+import { ThemedView } from '../../components/ThemedView';
 
-export default function TabTwoScreen() {
+export default function ExploreScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}>
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerImage={<Ionicons size={310} name="leaf-outline" style={styles.headerImage} />}>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">Explore Yoga</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      <ThemedText>Discover the rich world of yoga and its many benefits.</ThemedText>
+      <Collapsible title="What is Yoga?">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          Yoga is an ancient practice that combines physical postures, breathing techniques, and meditation. 
+          It originated in India over 5,000 years ago and has since spread worldwide, offering numerous 
+          health benefits for both body and mind.
         </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
+        <ExternalLink href="https://www.yogajournal.com/yoga-101/what-is-yoga/">
+          <ThemedText type="link">Learn more about Yoga</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
+      <Collapsible title="Types of Yoga">
         <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+          There are many styles of yoga, each with its own focus and benefits:
         </ThemedText>
-      </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
+        <ThemedText>• Hatha: Gentle, basic yoga poses</ThemedText>
+        <ThemedText>• Vinyasa: Flowing, dynamic movements</ThemedText>
+        <ThemedText>• Ashtanga: Rigorous, athletic style</ThemedText>
+        <ThemedText>• Yin: Slow-paced, holding poses for longer</ThemedText>
+        <ThemedText>• Bikram: Practiced in a heated room</ThemedText>
+        <ExternalLink href="https://www.yogajournal.com/yoga-101/types-of-yoga/">
+          <ThemedText type="link">Explore Yoga Styles</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Custom fonts">
+      <Collapsible title="Benefits of Yoga">
         <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
-          <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
-          </ThemedText>
+          Regular yoga practice can provide numerous benefits:
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
+        <ThemedText>• Improved flexibility and strength</ThemedText>
+        <ThemedText>• Better posture and balance</ThemedText>
+        <ThemedText>• Reduced stress and anxiety</ThemedText>
+        <ThemedText>• Enhanced mindfulness and focus</ThemedText>
+        <ThemedText>• Improved sleep quality</ThemedText>
+        <ExternalLink href="https://www.healthline.com/nutrition/13-benefits-of-yoga">
+          <ThemedText type="link">Read about Yoga Benefits</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Light and dark mode components">
+      <Collapsible title="Getting Started">
         <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user's current color scheme is, and so you can adjust UI colors accordingly.
+          To begin your yoga journey:
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+        <ThemedText>1. Choose a style that interests you</ThemedText>
+        <ThemedText>2. Find a qualified instructor or reputable online resource</ThemedText>
+        <ThemedText>3. Start with beginner-friendly classes</ThemedText>
+        <ThemedText>4. Practice regularly and be patient with yourself</ThemedText>
+        <ThemedText>5. Listen to your body and respect its limits</ThemedText>
       </Collapsible>
-      <Collapsible title="Animations">
+      <Collapsible title="Yoga Equipment">
         <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText> library
-          to create a waving hand animation.
+          While yoga requires minimal equipment, these items can enhance your practice:
         </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
+        <ThemedText>• Yoga mat for comfort and grip</ThemedText>
+        <ThemedText>• Yoga blocks for support in poses</ThemedText>
+        <ThemedText>• Straps to help with stretching</ThemedText>
+        <ThemedText>• Comfortable, breathable clothing</ThemedText>
+        <ExternalLink href="https://www.yogajournal.com/lifestyle/yoga-gear-and-props-guide/">
+          <ThemedText type="link">Yoga Equipment Guide</ThemedText>
+        </ExternalLink>
       </Collapsible>
     </ParallaxScrollView>
   );
@@ -90,7 +80,7 @@ export default function TabTwoScreen() {
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
+    color: '#4CAF50',
     bottom: -90,
     left: -35,
     position: 'absolute',
